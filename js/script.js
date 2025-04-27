@@ -1,10 +1,10 @@
 // script.js
 let currentIndex = -1;
 
-// 1) Load a pre‐built JSON manifest at /songs/songs.json
+// 1) Load a pre‐built JSON manifest at ./songs/songs.json
 let songManifest = {};
 async function loadManifest() {
-  const resp = await fetch('/songs/songs.json');
+  const resp = await fetch('./songs/songs.json');
   if (!resp.ok) throw new Error("Couldn't load songs.json");
   songManifest = await resp.json();
 }
@@ -23,7 +23,7 @@ function getCleanSongNames(folder) {
 
 function getSongURLs(folder) {
   return (songManifest[folder] || [])
-    .map(fn => `/songs/${folder}/${fn}`);
+    .map(fn => `./songs/${folder}/${fn}`);
 }
 
 // 3) Play a track and update the UI
@@ -95,7 +95,7 @@ async function displayAlbums() {
   for (const folder of Object.keys(songManifest)) {
     let info = { title: folder, description: '' };
     try {
-      const r = await fetch(`/songs/${folder}/info.json`);
+      const r = await fetch(`./songs/${folder}/info.json`);
       if (r.ok) info = await r.json();
     } catch (_) {}
 
@@ -104,7 +104,7 @@ async function displayAlbums() {
     card.dataset.folder = folder;
     card.innerHTML = `
       <div class="cover-image">
-        <img src="/songs/${folder}/cover.png" alt="${info.title} cover">
+        <img src="./songs/${folder}/cover.png" alt="${info.title} cover">
         <div class="play"><img src="assets/icons/play.svg" alt="Play"></div>
       </div>
       <h2>${info.title}</h2>
