@@ -185,9 +185,12 @@ See [LICENSE](LICENSE) for details.
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Disclaimer & Data Privacy
 
 > **DISCLAIMER:** Musicfy is a **personal educational project** and is **not affiliated**, endorsed by, or sponsored by Spotify (or any other music service).  
-> All music files must be *royalty-free* or used with proper permission. This site is provided “as is” for learning and demonstration purposes only.
+> Musicfy does **not** collect, track, or store any user data, usage analytics, personal information, payment details, or behavior.  
+> All music files must be *royalty-free* or used with proper permission.  
+> This site is provided “as is” for learning and demonstration purposes only.
+
 
 ---
