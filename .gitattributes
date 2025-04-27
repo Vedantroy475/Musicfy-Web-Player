@@ -1,0 +1,5 @@
+# Auto-detect text files and normalize to LF in repo
+* text=auto
+
+# But treat these directories as binary (no line-ending conversions)
+*.svg binary
