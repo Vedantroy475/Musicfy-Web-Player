@@ -22,9 +22,14 @@ body {
     /* Disables horizontal scrolling */
 }
 
+.disclaimer a{
+    color: white;
+    text-decoration: underline;
+}
 .left {
     width: 25vw;
     padding: 34px;
+    
 
 }
 
@@ -550,6 +555,10 @@ body {
         top: 25px;
         width: 29px;
 
+    }
+
+    .left .footer{
+        bottom: 0px;
     }
 
     .timevol {
